@@ -1,0 +1,13 @@
+#demo {
+    background: #D0E4F5 url("./Pictures/index.jpeg") no-repeat scroll 50% 50%;
+    -moz-transform: scale(1.5) rotate(32deg);
+    -webkit-transform: scale(1.5) rotate(32deg);
+    -o-transform: scale(1.5) rotate(32deg);
+    -ms-transform: scale(1.5) rotate(32deg);
+    transform: scale(1.5) rotate(32deg);
+
+    border-width: 5px;
+    border-style: dotted;
+    border-color: #1C6EA4;
+    border-radius: 26px;
+    }
