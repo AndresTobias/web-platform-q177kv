@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="card-mat-card">
+<div class="card-mat-card" id="1">
     <div class="card-titles">
         <h2>Acerca de</h2>
         <div class="btn-edit" onclick="cambiar_parrafo()">
@@ -65,7 +65,20 @@
         <input id="edit-acercade" type="text" oninput="myfunction2(this.value)">
     </div>
 </div>
+
+<div class="card mat-card">
+    <div id="Nombre">1</div>
+</div>
+
+<div class="card mat-card">
+    <div id="Apellido">1</div>
+</div>
+<div class="card mat-card">
+    <div id="Titulo">1</div>
+</div>
+
 <input type="file" id="file1" onchange="showFile(this)">
+<script src="./ecma_brw.js"></script>
 <script>
     function cambiar_parrafo(){
         document.getElementById("edit-acercade").style.display="block";
@@ -98,8 +111,18 @@
             console.log(reader.error);
         };
     };
-</script>
 
+</script>
+<script>
+    function foo(){
+        let newDiv = document.createElement("div");
+        let newContent =document.createTextNode("texto para ver");
+        newDiv.appendChild(newContent);
+        let lugarDiv=document.getElementById("1");
+        document.body.insertBefore(newDiv,lugarDiv);
+    };
+    foo ();
+</script>
 </body>
 
 
