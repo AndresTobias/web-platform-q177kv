@@ -23,8 +23,8 @@ function GetTitulos(titulo1, titulo2) {
     a.textContent = titulo1, titulo2;
     return pofolio.Titulo[0] = titulo1, pofolio.Titulo[1] = titulo2;
 }
-function showFile(input) {
-    var file = input.file[0];
+function showFile1(input) {
+    var file = input.files[0];
     var reader = new FileReader();
     reader.readAsText(file);
     reader.onload = function (prgressEvent) {

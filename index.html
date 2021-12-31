@@ -59,13 +59,13 @@
         </div>
     </div>
     <div>
-        <p id="text-acercade">Un tipo x que no se que macri gato</p>
+        <p id="text-acercade">Un tipo x </p>
     </div>
     <div>
-        <input id="edit-acercade" type="text" oninput="myfunction2(this.value)">
+        <input id="edit-acercade" type="text" oninput="myfunction2(this.value)"style="display:none">
     </div>
 </div>
-
+<input type="file" id="file" onchange="MostrarArchivo(this)">
 <div class="card mat-card">
     <div id="Nombre">1</div>
 </div>
@@ -76,9 +76,25 @@
 <div class="card mat-card">
     <div id="Titulo">1</div>
 </div>
+<input type="file" id="file" onchange="showFile1(this)">
 
-<input type="file" id="file1" onchange="showFile(this)">
-<script src="./ecma_brw.js"></script>
+<!--<script src="./ecma_brw.js"></script>-->
+<script src="./objetos.js"></script>
+<script>
+   function MostrarArchivo(input){
+        let archivo=input.files[0];
+        let lectura= new FileReader();
+        lectura.readAsText(archivo);
+        lectura.onload=function(){
+            console.log(lectura.result);
+            document.getElementById("text-acercade").innerText=lectura.result;
+        };
+        lectura.onerror=function(){
+            console.log(lectura.error);
+        };
+    };
+     
+</script>
 <script>
     function cambiar_parrafo(){
         document.getElementById("edit-acercade").style.display="block";
@@ -99,19 +115,8 @@
             document.getElementById("edit-acercade").style.display="none"
         }
     });
-    function showFile(input){
-        let file=input.file[0];
-        let reader= new FileReader();
-        reader.readAsText(file);
-        reader.onload=function(){
-            console.log(reader.result);
-            document.getElementById("text-acercade").innerText=reader.result;
-        };
-        reader.onerror=function(){
-            console.log(reader.error);
-        };
-    };
-
+    
+    
 </script>
 <script>
     function foo(){
