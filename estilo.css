@@ -1,10 +1,10 @@
-.map-card {
+.mat-card {
     border-radius: 32px;
     margin: 10px 10px;
     padding: 20px;
     border-color: blueviolet;
 }
-.map-card#first-card{
+.ma-card#first-card{
     padding: 0;
 }
 div#profile-background {
